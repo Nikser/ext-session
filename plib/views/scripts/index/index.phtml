@@ -1,0 +1,54 @@
+<?php
+// Copyright 1999-2016. Parallels IP Holdings GmbH.
+?>
+<table>
+    <tr data-row="isExists">
+        <td><?= pm_Locale::lmsg('isExistsResult') . ":"; ?></td>
+        <td><?= pm_Locale::lmsg($this->isExists ? 'yes' : 'no'); ?></td>
+    </tr>
+
+    <tr data-row="client">
+        <td><?= pm_Locale::lmsg('clientResult') . ":"; ?></td>
+        <td><?= $this->client ? $this->escape($this->client->getProperty('login')) : pm_Locale::lmsg('none'); ?></td>
+    </tr>
+
+
+    <tr data-row="isImpersonated">
+        <td><?= pm_Locale::lmsg('isImpersonatedResult') . ":"; ?></td>
+        <td><?= $this->isImpersonated ? 'true' : 'false'; ?></td>
+    </tr>
+
+
+    <tr data-row="getImpersonatedClientId">
+        <td><?= pm_Locale::lmsg('getImpersonatedClientIdResult') . ":"; ?></td>
+        <td><?= (int)$this->clientId; ?></td>
+    </tr>
+
+    <tr data-row="currentDomain">
+        <td><?= pm_Locale::lmsg('currentDomainResult') . ":"; ?></td>
+        <td><?= $this->escape($this->currentDomain->getName()); ?></td>
+    </tr>
+
+    <tr data-row="currentDomains">
+        <td><?= pm_Locale::lmsg('currentDomainsResult') . ':'; ?></td>
+        <td>
+            <ol>
+                <?php foreach ($this->currentDomains as $domain) : ?>
+                    <li><?= $this->escape($domain->getName()) ?></li>
+                <?php endforeach; ?>
+            </ol>
+        </td>
+    </tr>
+
+    <tr data-row="mainCurrentDomains">
+        <td><?= pm_Locale::lmsg('mainCurrentDomainsResult') . ':'; ?></td>
+        <td>
+            <ol>
+                <?php foreach ($this->mainCurrentDomains as $domain) : ?>
+                    <li><?= $this->escape($domain->getName()) ?></li>
+                <?php endforeach; ?>
+            </ol>
+        </td>
+    </tr>
+
+</table>

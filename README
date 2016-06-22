@@ -1,0 +1,9 @@
+Extension Session Example for Plesk
+
+A test extension intended to demonstrate how session work.
+
+The following techniques are demonstrated:
+* Check if session is initialized or not
+* Get current client
+* Get current domain
+* Get list of domains
