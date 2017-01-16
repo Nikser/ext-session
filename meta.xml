@@ -4,8 +4,9 @@
     <id>session-example</id>
     <name>Session Example</name>
     <description>This extension is an example extension with session.</description>
+    <category>example</category>
     <version>1.0</version>
-    <release>1</release>
+    <release>2</release>
     <vendor>Plesk</vendor>
     <plesk_min_version>17.0.14</plesk_min_version>
 </module>
